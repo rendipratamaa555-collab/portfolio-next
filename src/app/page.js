@@ -11,7 +11,7 @@ export default function Home() {
   ];
 
   const jadwalBelajar = [
-    { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca 5ulang modul" },
+    { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
     { hari: "Selasa", waktu: "19.00 - 21.00", kegiatan: "Mengerjakan tugas praktik" },
     { hari: "Rabu", waktu: "19.30 - 20.30", kegiatan: "Merekam video dan menulis laporan" },
   ];
