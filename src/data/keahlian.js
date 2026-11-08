@@ -1,7 +1,7 @@
 export const keahlian = [
-  { slug: "html", nama: "HTML", level: "Menengah", deskripsi: "Mampu menyusun struktur semantik halaman web, menggunakan tag form, tabel, dan elemen multimedia secara terstruktur pada tugas portofolio." },
-  { slug: "css", nama: "CSS", level: "Menengah", deskripsi: "Menguasai penataan gaya modern menggunakan Flexbox, Grid Layout, penataan variabel warna, dan pembuatan desain responsif agar rapi di semua perangkat." },
-  { slug: "git-github", nama: "Git dan GitHub", level: "Dasar", deskripsi: "Memahami sistem kontrol versi, melakukan commit, menggunakan branch dasar, serta melakukan push repositori portofolio ke akun GitHub." },
-  { slug: "canva", nama: "Desain poster dengan Canva", level: "Mahir", deskripsi: "Ahli dalam merancang aset visual, poster digital, penataan tipografi, dan memilih palet warna yang menarik untuk kebutuhan aset web." },
-  { slug: "javascript", nama: "JavaScript", level: "Dasar", deskripsi: "Mampu melakukan manipulasi DOM dasar, menangani event listener tombol ganti tema, dan menerapkan logika pengondisian waktu sapaan dinamis." }
+  { slug: "html", nama: "HTML", level: "Menengah", deskripsi: "Menyusun elemen semantik, formulir, tabel, dan media secara terstruktur untuk membangun pondasi halaman web yang rapi dan optimal." },
+  { slug: "css", nama: "CSS", level: "Menengah", deskripsi: "Menata tampilan halaman web yang rapi dan adaptif menggunakan Flexbox, Grid, variabel warna, serta prinsip desain responsif untuk kenyamanan pengguna di berbagai perangkat." },
+  { slug: "git-github", nama: "Git dan GitHub", level: "Dasar", deskripsi: "Mengelola versi kode program secara sistematis menggunakan Git serta memanfaatkan GitHub untuk penyimpanan repositori dan dokumentasi riwayat perubahan proyek yang teratur." },
+  { slug: "canva", nama: "Desain poster dengan Canva", level: "Mahir", deskripsi: "Merancang poster yang menarik dan komunikatif menggunakan Canva melalui pemanfaatan tata letak visual, kombinasi warna yang harmonis, serta tipografi yang tepat." },
+  { slug: "javascript", nama: "JavaScript", level: "Dasar", deskripsi: "Mengimplementasikan logika interaktif pada halaman web melalui penanganan event, pengkondisian, dan manipulasi DOM untuk merespons interaksi pengguna secara dinamis." }
 ];

@@ -1,6 +1,6 @@
 export const proyek = [
   {
-    slug: "Junior Web Developer Industry Class MODUL 1",
+    slug: "junior-web-developer-industry-class-modul-1",
     judul: "Junior Web Developer Industry Class MODUL 1",
     kategori:["HTML", "CSS","CodePen"], 
     minggu: "Minggu 01",
@@ -13,7 +13,7 @@ export const proyek = [
     ],
   },
   {
-    slug: "Mobile Responsive MODUL 2",
+    slug: "mobile-responsive-modul-2",
     judul: "Mobile Responsive MODUL 2",
     kategori: ["HTML", "CSS", "Responsive"],
     minggu: "Minggu 02",
@@ -26,7 +26,7 @@ export const proyek = [
     ],
   },
   {
-    slug: "Interactive Digital Profile MODUL 3",
+    slug: "interactive-digital-profile-modul-3",
     judul: "Interactive Digital Profile MODUL 3",
     kategori: ["HTML", "CSS", "JAVASCRIPT"],
     minggu: "Minggu 03",

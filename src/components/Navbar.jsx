@@ -1,40 +1,44 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import TombolTema from "@/components/TombolTema";
 
 const menu = [
- { href: "/", label: "Beranda" },
- { href: "/tentang", label: "Tentang" },
- { href: "/keahlian", label: "keahlian" },
- { href: "/proyek", label: "Proyek" },
- { href: "/kontak", label: "Kontak" }
-];
+    { href: "/", label: "Beranda" } ,
+    { href: "/tentang", label: "Tentang" } ,
+    { href: "/keahlian", label: "Keahlian" } ,
+    { href: "/proyek", label: "Proyek" } ,
+    { href: "/kontak", label: "Kontak" } ,
+] ;
 
-export default function Navbar() {
-  const pathname = usePathname ();
- return (
-   <header className="bg-[#0d233a] text-white">
-   <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
-   <Link href="/" className="text-xl font-bold">
- Rendi Pratama
-   </Link>
-   <ul className="flex flex-wrap gap-x-5 gap-y-2">
-     {menu.map((item) => {
-        let kelas = "text-gray-200 hover:text-white transition-all";
-        if (pathname === item.href) {
-        kelas = "font-bold text-white underline underline-offset-8 decoration-2";
-     }
+export default function Navbar () {
+    const pathname = usePathname();
 
-      return( 
-       <li key={item.href}>
-        <Link href={item.href} className={kelas}>
-           {item.label}
-          </Link>
-         </li>
-          );
-     })}
-      </ul>
-     </nav>
-   </header>
- );
+    return (
+        <header className="bg-utama text-white">
+            <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
+                <Link href="/" className="text-xl font-bold">
+                Rendi Pratama
+                </Link>
+                <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                    {menu.map ( (item) => {
+                        let kelas = "text-gray-200 hover:text-white";
+                        if (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)) {
+                            kelas = "font-bold text-white underline underline-offset-8";
+                        }
+
+                        return (
+                            <li key={item.href}>
+                                <Link href={item.href} className={kelas}>
+                                    {item.label}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+                <TombolTema />
+            </nav>
+        </header>
+    ) ;
 }

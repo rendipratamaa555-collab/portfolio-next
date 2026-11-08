@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
- --color-utama: #1D3557;
- --color-aksen: #C1121F;
- --color-latar: #F1FAEE;
+  --color-utama: #1d3557;
+  --color-aksen: #c1121f;
+  --color-latar: #f1faee;
 }

@@ -1,83 +1,50 @@
-"use client";
-
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import SkillCard from "@/components/SkillCard";
 import ProyekCard from "@/components/ProyekCard";
-import SkillCard from "@/components/SkillsCard";
 import { proyek } from "@/data/proyek";
+import { keahlian } from "@/data/keahlian";
+
+const proyekTerbaru = proyek.slice(-3);
 
 export default function Home() {
-  
-  const skills = [
-    { id: 1, nama: "HTML", level: "Menengah" },
-    { id: 2, nama: "CSS", level: "Menengah" },
-    { id: 3, nama: "Git dan GitHub", level: "Dasar" },
-    { id: 4, nama: "Desain poster dengan Canva", level: "Mahir" },
-    { id: 5, nama: "JavaScript", level: "Dasar" },
-  ];
-
-  const proyekTerbaru = proyek.slice(-3);
-
-  // Fungsi untuk scroll otomatis ke section tertentu
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="min-h-screen text-[#1e293b] flex flex-col font-sans">
-      <main className="max-w-5xl mx-auto p-4 md:p-10 w-full space-y-12">
-        
-        {/* Section 1: Hero */}
-        <Hero
-          nama="Rendi Pratama"
-          tagline="Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG." 
-          onTentangSayaClick={() => scrollToSection("tentang-saya")}
-          onLihatKeahlianClick={() => scrollToSection("keahlian")}
-        />
+    <main className="mx-auto max-w-5xl px-4 py-10 space-y-6">
+      <Hero
+        nama="Rendi Pratama"
+        tagline="Siswa SMK calon Junior Web Developer di Kelas Industri UBIG."
+      />
 
-        {/* Section: Keahlian */}
-        <section id="keahlian" className="scroll-mt-6">
-          <h2 className="text-xl font-bold text-[#0d233a] mb-5">Keahlian</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {skills.map((skill) => (
-              <SkillCard key={skill.id} nama={skill.nama} level={skill.level} />
-            ))}
-          </div>
+      {/* Keahlian */}
+      <section id="keahlian" className="scroll-mt-6">
+        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200">Keahlian</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          {keahlian.map((item) => (
+            <SkillCard key={item.slug} nama={item.nama} level={item.level} />
+          ))}
+        </div>
+        <Link
+          href="/keahlian"
+          className="mt-6 inline-block rounded-lg bg-utama px-5 py-2 text-sm font-semibold text-white">
+            Lihat semua keahlian
+          </Link>
+      </section>
 
-          <div className="mt-8 flex justify-start">
-            <Link 
-              href="/keahlian" 
-              className="rounded-lg bg-red-700 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-red-800 transition-all text-sm"
-            >
-              Lihat semua keahlian
-            </Link>
-          </div>
-        </section>
-
-        {/* Section: Proyek Terbaru */}
-        <section className="pt-2">
-          <h2 className="mb-5 text-xl font-bold text-[#0d233a]">Proyek Terbaru</h2>
-          
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {proyekTerbaru.map((item) => (
-              <ProyekCard key={item.slug} proyek={item} />
-            ))}
-          </div>
-          
-          <div className="mt-8 flex justify-start">
-            <Link 
-              href="/proyek" 
-              className="rounded-lg bg-red-700 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-red-800 transition-all text-sm"
-            >
-              Lihat semua proyek
-            </Link>
-          </div>
-        </section>
-
-      </main>
-    </div>
+      {/* Proyek Terbaru */}
+      <section className="mt-10">
+        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200">Proyek Terbaru</h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {proyekTerbaru.map((item) => (
+            <ProyekCard key={item.slug} proyek={item} />
+          ))}
+        </div>
+        <Link
+          href="/proyek"
+          className="mt-6 inline-block rounded-lg bg-utama px-5 py-2 font-semibold text-white"
+        >
+          Lihat semua proyek
+        </Link>
+      </section>
+    </main>
   );
 }
