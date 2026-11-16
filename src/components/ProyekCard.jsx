@@ -19,12 +19,12 @@ export default function ProyekCard ({ proyek }) {
           {proyek.kategori && typeof proyek.kategori === 'string' && proyek.kategori.split(",").map((k) => (
             <span
             key={k.trim()}
-            className="rounded-full bg-latar dark:bg-gray-900 px-3 py-1 text-xs font-semibold text-utama dark:text-sky-200">
+            className="rounded-full bg-latar dark:bg-gray-900 px-3 py-1 text-xs font-semibold text-primary">
               {k.trim()}
             </span>
           ))}
         </div>
-        <h3 className="mt-3 text-lg font-semibold text-utama dark:text-sky-200">{proyek.judul}</h3>
+        <h3 className="mt-3 text-lg font-semibold text-primary">{proyek.judul}</h3>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{proyek.deskripsi}</p>
       </div>
     </Link>

@@ -26,7 +26,7 @@ const jadwal = [
 export default function Tentang() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 space-y-6">
-      <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
+      <h1 className="text-3xl font-bold text-primary md:text-4xl">
         Tentang Saya
       </h1>
 

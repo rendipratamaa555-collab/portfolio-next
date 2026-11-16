@@ -1,6 +1,6 @@
 # Struktur Database Portofolio
 
-Database disimpan di Supabase, project `portofolio-andi` (region
+Database disimpan di Supabase, project `portofolio-Rendi` (region
 Southeast Asia, Singapore). Alamat project dan
 publishable key disimpan di `.env.local`, yang tidak ikut di-commit
 karena tercantum di `.gitignore` (`.env*`).

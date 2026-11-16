@@ -11,7 +11,7 @@ const daftarKategori = [
   "Next.js",
 ];
 const tombolBiasa =
-  "rounded-full border border-utama dark:border-sky-200 px-4 py-1 text-sm font-semibold text-utama dark:text-sky-200";
+  "rounded-full border border-utama dark:border-sky-200 px-4 py-1 text-sm font-semibold text-primary";
 const tombolAktif =
   "rounded-full border border-aksen bg-aksen px-4 py-1 text-sm font-semibold text-white";
 
